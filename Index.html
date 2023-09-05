@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <div class="fundo">
+        <h1>Projeto Calculadora.JS Stackx</h1>
+        <div class="calculadora">
+        <h1>Calculadora</h1>
+        <p id="resultado"></p>
+        <table>
+            <tr>
+                <td><button class="botao" onclick="limpar()">C</button></td>
+                <td><button class="botao" onclick="apagar()"><</button></td>
+                <td><button class="botao" onclick="adcionar('/')">/</button></td>
+                <td><button class="botao" onclick="adcionar('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao" onclick="adcionar('7')">7</button></td>
+                <td><button class="botao" onclick="adcionar('8')">8</button></td>
+                <td><button class="botao" onclick="adcionar('9')">9</button></td>
+                <td><button class="botao" onclick="adcionar('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao" onclick="adcionar('4')">4</button></td>
+                <td><button class="botao" onclick="adcionar('5')">5</button></td>
+                <td><button class="botao" onclick="adcionar('6')">6</button></td>
+                <td><button class="botao" onclick="adcionar('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao" onclick="adcionar('1')">1</button></td>
+                <td><button class="botao" onclick="adcionar('2')">2</button></td>
+                <td><button class="botao" onclick="adcionar('3')">3</button></td>
+                <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td> <!--rowspan faz com que ocupe mais de uma linha (no caso duas linhas)-->
+            </tr>
+            <tr>
+                <td colspan="2"><button  class="botao" style="width: 106px;" onclick="adcionar('0')">0</button></td> <!--colspan faz com que ocupe mais de uma coluna (no caso duas colunas)-->
+                <td><button class="botao" onclick="adcionar('.')">.</button></td>
+            </tr>
+        </table>
+      </div>
+      <div id="historico" class="historico">
+        <h2>Histórico</h2>
+        <ol id="historico-lista" start="1" type="1" class="historico-lista"></ol>
+    </div>
+    
+    </div>
+    <script type="text/javascript" src="Logica.js"></script>
+</body>
+</html>
